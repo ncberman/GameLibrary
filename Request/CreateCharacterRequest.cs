@@ -1,6 +1,8 @@
-﻿namespace GameLibrary.Request
+﻿using GameLibrary.Request.Util;
+
+namespace GameLibrary.Request
 {
-    public class CreateCharacterRequest : IRequest
+    public class CreateCharacterRequest : IRequest, IRealtimeRequest
     {
         #region Required For JsonConverter
         public CreateCharacterRequest() { }
@@ -15,6 +17,5 @@
         {
             _CharacterName = characterName;
         }
-
     }
 }

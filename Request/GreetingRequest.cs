@@ -1,6 +1,8 @@
-﻿namespace GameLibrary.Request
+﻿using GameLibrary.Request.Util;
+
+namespace GameLibrary.Request
 {
-    public class GreetingRequest : IRequest
+    public class GreetingRequest : IRequest, IRealtimeRequest
     {
         #region Required For JsonConverter
         public GreetingRequest() { }

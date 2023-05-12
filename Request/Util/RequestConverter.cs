@@ -23,7 +23,7 @@ namespace GameLibrary.Request.Util
         {
             var jsonObject = JObject.Load(reader);
             var request = default(IRequest);
-            var requestTypeStr = jsonObject["RequestType"].Value<string>();
+            var requestTypeStr = jsonObject["RequestType"]?.Value<string>();
             var requestType = (RequestType)Enum.Parse(typeof(RequestType), requestTypeStr);
             switch (requestType)
             {

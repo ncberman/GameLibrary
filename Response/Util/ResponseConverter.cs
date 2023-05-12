@@ -20,15 +20,18 @@ namespace GameLibrary.Response.Util
         {
             var jsonObject = JObject.Load(reader);
             var response = default(IResponse);
-            var responseTypeStr = jsonObject["ResponseType"].Value<string>();
+            var responseTypeStr = jsonObject["ResponseType"]?.Value<string>();
             var responseType = (ResponseType)Enum.Parse(typeof(ResponseType), responseTypeStr);
             switch (responseType)
             {
+                case ResponseType.ERROR:
+                    response = new ErrorResponse();
+                    break;
                 case ResponseType.GREETING:
                     response = new GreetingResponse();
                     break;
-                case ResponseType.ERROR:
-                    response = new ErrorResponse();
+                case ResponseType.CHARACTER_CREATE:
+                    response = new CreateCharacterResponse();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), response);
