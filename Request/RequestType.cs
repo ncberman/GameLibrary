@@ -4,6 +4,8 @@
     {
         GREETING,
         CHARACTER_CREATE,
+        CHARACTER_RETRIEVE,
+        USER_RETRIEVE,
         CHAT,
         MOVEMENT
     }

@@ -3,11 +3,11 @@ using GameLibrary.Response.Util;
 
 namespace GameLibrary.Response
 {
-    public class CreateCharacterResponse : IResponse
+    public class RetrieveCharacterResponse : IResponse
     {
         #region Required For JsonConverter
-        public CreateCharacterResponse() { }
-        private readonly ResponseType _ResponseType = ResponseType.CHARACTER_CREATE;
+        public RetrieveCharacterResponse() { }
+        private readonly ResponseType _ResponseType = ResponseType.CHARACTER_RETRIEVE;
         public ResponseType ResponseType { get { return _ResponseType; } }
         private readonly ResponseStatus _Status;
         public ResponseStatus Status { get { return _Status; } }
@@ -19,7 +19,7 @@ namespace GameLibrary.Response
         private SharedCharacter _Character;
         public SharedCharacter Character { get { return _Character; } set { _Character = value; } }
 
-        public CreateCharacterResponse(ResponseStatus status, string message, SharedCharacter character) 
+        public RetrieveCharacterResponse(ResponseStatus status, string message, SharedCharacter character) 
         { 
             _Status = status; _Message = message; _Character = character;
         }

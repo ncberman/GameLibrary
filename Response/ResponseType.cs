@@ -4,6 +4,8 @@
     {
         ERROR,
         GREETING,
-        CHARACTER_CREATE
+        CHARACTER_CREATE,
+        CHARACTER_RETRIEVE,
+        USER_RETRIEVE
     }
 }
