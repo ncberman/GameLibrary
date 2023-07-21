@@ -2,6 +2,6 @@
 {
     public interface IRequest
     {
-        public RequestType RequestType { get; }
+        
     }
 }
