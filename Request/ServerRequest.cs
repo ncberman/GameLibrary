@@ -11,7 +11,6 @@ namespace GameLibrary.Request
         private string _SessionId;
         public string SessionId { get { return _SessionId; } set { _SessionId = value; } }
 
-        [JsonConverter(typeof(RequestConverter))]
         private IRequest _Request;
         public IRequest Request { get { return _Request; } set { _Request = value; } }
 
